@@ -11,11 +11,34 @@ A Hash Table transforms a key into an integer index using a hash function, and t
 - [Description](#description)
 - [Hash Table Notes](#hash-table-notes)
 - [Mock Up](#mock-up)
+- [Credits](#credits)
 
 ---
 
 ## Hash Table Notes
 
+### Big O
+
+Operates fast in searching, inserting and deleting.
+
+Worst case: O(n)
+
+### Object
+
+### Map
+
 ---
 
 ## Mock Up
+
+---
+
+## Credits:
+
+Full Stack Development Bootcamp Course Notes.
+
+Plus, following tutorials/resources were leveraged:
+
+- https://www.w3schools.com/js/js_object_definition.asp
+- https://www.w3schools.com/js/js_object_maps.asp
+- https://www.freecodecamp.org/news/javascript-hash-table-associative-array-hashing-in-js/
