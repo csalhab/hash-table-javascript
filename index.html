@@ -107,6 +107,42 @@
                 </ul>
             </div>
         </div>
+        <div class="row">
+            <div class="col-12">
+                Unlike the Object type, Map requires you to use the set() and get() methods to define and retrieve any key-pair values that you want to be added to the data structure.
+                <p>You also can't overwrite Map inherited properties. For example, the following code tried to overwrite the size property value to false:</p>
+                <ol>
+                    <li>const collection = new Map();
+                    </li>
+                    <li>collection.set("John", "555-1234");
+                    </li>
+                    <li>collection["size"] = false;</li>
+                    <li>
+                        console.log(collection.get("size")); // undefined
+                        <p>console.log(collection.size); // 1
+                        </p>
+                        <p>As you can see from the code above, you can't add a new entry to the Map object without using the set() method.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                The Map data structure is also iterable, which means you can loop over the data as follows:
+                <ol>
+                    <li>const myMap = new Map();
+                    </li>
+                    <li>myMap.set("John", "555-1234");
+                    </li>
+                    <li>myMap.set("Jane", "555-9876");
+                    </li>
+                    <li>for (let [key, value] of myMap) {
+                        <p>console.log(`${key} = ${value}`);</p>
+                        <p>}</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </main>
   </body>
 </html>
