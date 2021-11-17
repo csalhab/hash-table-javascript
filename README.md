@@ -9,13 +9,22 @@ A Hash Table transforms a key into an integer index using a hash function, and t
 ## Table of Contents
 
 - [Description](#description)
+- [Deployment](#deployment)
 - [Hash Table Notes](#hash-table-notes)
 - [Mock Up](#mock-up)
 - [Credits](#credits)
 
 ---
 
+## Deployment
+
+[You may see the deployed Hash Map - Javascript Notes here](https://csalhab.github.io/hash-table-javascript/)
+
+---
+
 ## Hash Table Notes
+
+---
 
 ### Big O
 
