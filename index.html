@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Hash Table - Javascript</title>
@@ -11,10 +17,96 @@
   <body>
     <header>Hash Table - Javascript</header>
     <main>
-      <p>Hash Tables (Map data structure in JS)</p>
-      <p>key/value pairs JS</p>
-      <p>we can getaway with obj literal though</p>
-      <p>use hash tables more in other prg languages</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <p>Hash Tables (use Map data structure in JS)</p>
+                    <p>key/value pairs</p>
+                    <p>we can getaway with object literal though</p>
+                    <p>use hash tables more in other prg languages</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <p>
+                        The most common example of a Hash Table in JavaScript is the Object data
+                        type, where you can pair the object's property value with a property
+                        key. 
+                    </p>
+                    <p>
+                    In the following example, the key John is paired with the phone
+                    number value of "555-1234" and the key Jane is paired with the value
+                    "555-9876": 
+                    <p>
+                        let obj = { 
+                        <p>
+                            John: "555-1234", 
+                        </p>
+                        <p>
+                            Jane: "555-9876"
+                        </p>
+                        <p>
+                            }
+                        </p>
+                    </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                But JavaScript's Object type is a special kind of Hash Table implementation for two reasons:
+                <ol>
+                    <li>It has properties added by the Object class. Keys you input may conflict and overwrite default properties inherited from the class.</li>
+                    <li>The size of the Hash Table is not tracked. You need to manually count how many properties are defined by the programmer instead of inherited from the prototype.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                For example, the Object prototype has the hasOwnProperty() method which allows you to check if a property is not inherited:
+                <ol>
+                    <li>const obj = {};
+                    </li>
+                    <li>obj.name = "John";
+                    </li>
+                    <li>
+                        console.log(obj.hasOwnProperty("name")); // true
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                JavaScript doesn't block an attempt to overwrite the hasOwnProperty() method, which may cause an error like this:
+                <ol>
+                    <li>const obj = {};
+                    </li>
+                    <li>obj.name = "John";
+                    </li>
+                    <li>obj.hasOwnProperty = true;</li>
+                    <li>
+                        console.log(obj.hasOwnProperty("name"));
+                        <p>// Error: obj.hasOwnProperty is not a function</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                To handle these shortcomings, JavaScript created another implementation of the Hash Table data structure which is called Map
+                <p>Just like Object, Map allows you to store key-value pairs inside the data structure. Here's an example of Map in action:</p>
+                <ol>
+                    <li>const collection = new Map();
+                    </li>
+                    <li>collection.set("John", "555-1234");
+                    </li>
+                    <li>collection.set("Jane, "555-9876");</li>
+                    <li>
+                        console.log(collection.get("John")); // 555-1234
+                        <p>console.log(collection.size); // 2</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </main>
   </body>
 </html>
